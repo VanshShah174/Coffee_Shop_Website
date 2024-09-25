@@ -270,3 +270,41 @@
   #blog h3 {
     color: var(--primary-color);
   }
+
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+  }
+  
+  button {
+    background: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.8em 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: var(--accent-color);
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: var(--primary-color);
+    color: #ffffff;
+    margin-top: 2em;
+  }
