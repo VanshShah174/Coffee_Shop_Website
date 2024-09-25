@@ -43,6 +43,22 @@
           <a href="#menu" class="cta-button">Explore Our Menu</a>
         </div>
       </section>
-      </main>
+
+      <!-- Menu section with category filters -->
+      <section id="menu">
+        <h2>Menu</h2>
+        <div class="category-buttons">
+          <button onclick="showCategory('All')">All</button>
+          <button onclick="showCategory('Hot Drinks')">Hot Drinks</button>
+          <button onclick="showCategory('Cold Drinks')">Cold Drinks</button>
+          <button onclick="showCategory('Pastries')">Pastries</button>
+          <button onclick="showCategory('Sandwiches')">Sandwiches</button>
+        </div>
+        <div id="menuItems" class="menu-items-container">
+          <!-- Menu items will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
     </body>
     </html>
