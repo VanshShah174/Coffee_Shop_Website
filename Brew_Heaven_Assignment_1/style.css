@@ -308,3 +308,114 @@
     color: #ffffff;
     margin-top: 2em;
   }
+
+  /* Cart Styles */
+  #cartCount {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    margin-left: 0.5em;
+  }
+  
+  /* Cart Page Styles */
+  #cart {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    max-width: 800px;
+    margin: 2em auto;
+  }
+  
+  #cartItems {
+    margin-bottom: 2em;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 1em 0;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+  }
+  
+  .item-price {
+    color: var(--accent-color);
+    font-weight: 500;
+  }
+  
+  .item-quantity {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+  }
+  
+  .quantity-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .remove-btn {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-btn:hover {
+    background-color: #d90000;
+  }
+  
+  #cartTotal {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 1em;
+    color: var(--primary-color);
+  }
+  
+  #checkoutBtn {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    font-size: 1.1em;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkoutBtn:hover {
+    background-color: var(--primary-color);
+  }
