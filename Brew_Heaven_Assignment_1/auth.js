@@ -32,3 +32,28 @@ document.addEventListener('DOMContentLoaded', function() {
         signup(username, password);
     });
 });
+
+// Authentication Logic
+function login(username, password) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.username === username && u.password === password);
+    if (user) {
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        alert('Login successful');
+        window.location.href = 'index.html';
+    } else {
+        alert('Invalid credentials');
+    }
+}
+
+function signup(username, password) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    if (users.find(u => u.username === username)) {
+        alert('Username already exists');
+        return;
+    }
+    users.push({ username, password });
+    localStorage.setItem('users', JSON.stringify(users));
+    alert('Sign up successful. Please log in.');
+    document.getElementById('loginToggle').click();
+}
