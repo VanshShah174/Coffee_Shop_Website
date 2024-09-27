@@ -446,3 +446,25 @@
     margin-bottom: 2rem;
   }
 }
+
+@media (max-width: 480px) {
+  .menu-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .item-quantity {
+    margin-top: 0.5em;
+  }
+  
+  .remove-btn {
+    margin-top: 0.5em;
+  }
+}
