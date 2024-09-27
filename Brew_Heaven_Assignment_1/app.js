@@ -34,10 +34,27 @@ function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
+// Function to save the cart to local storage
+function saveCart(cart) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Function to update the cart count in the UI
+function updateCartCount() {
+  const cart = getCart();
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+  document.getElementById('cartCount').textContent = totalItems;
+}
+
 function getItemQuantity(itemId) {
   const cart = getCart();
   const item = cart.find((i) => i.id === itemId);
   return item ? item.quantity : 0;
+}
+
+ // Function to check if a user is logged in
+ function isUserLoggedIn() {
+  return JSON.parse(localStorage.getItem('currentUser')) !== null;
 }
 
 function showCategory(category) {
@@ -73,4 +90,5 @@ function showCategory(category) {
 
 document.addEventListener("DOMContentLoaded", function () {
   loadMenu();
+  updateCartCount();
 });
