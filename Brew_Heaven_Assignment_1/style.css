@@ -468,3 +468,10 @@
     margin-top: 0.5em;
   }
 }
+
+@media (max-width: 1024px) {
+  .header-top{
+    display: grid;
+    
+  }
+}
