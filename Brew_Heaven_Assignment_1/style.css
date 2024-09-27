@@ -419,3 +419,30 @@
   #checkoutBtn:hover {
     background-color: var(--primary-color);
   }
+
+ /* Media Queries */
+ @media (max-width: 1024px) {
+  .menu-item {
+    flex: 0 0 calc(33.333% - 1em);
+    max-width: calc(33.333% - 1em);
+  }
+
+  .category-buttons button{
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex: 0 0 calc(50% - 1em);
+    max-width: calc(50% - 1em);
+  }
+  
+  .featured-items {
+    flex-direction: column;
+  }
+  
+  .featured-item {
+    margin-bottom: 2rem;
+  }
+}
