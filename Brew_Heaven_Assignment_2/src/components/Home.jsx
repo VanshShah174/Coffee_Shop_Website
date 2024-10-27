@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Menu from "./Menu";
 import Gallery from "./Gallery";
 import Blog from "./Blog";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Menu />
       <Gallery />
       <Blog />
+      <Contact/>
     </div>
   );
 };
