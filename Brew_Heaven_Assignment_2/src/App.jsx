@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { CartProvider } from "../store/CartContext";
-import { Success } from "./pages/Success"
-import { Cancel } from "./pages/Cancel"
-
-
-
+import { CartProvider } from "./store/CartContext";
+import  Success  from "./pages/Success"
+import Home from './components/Home';
+import Cancel from './pages/Cancel'
 
 import "./App.css";
 import Cart from "./components/Cart";
@@ -15,10 +13,10 @@ function App() {
     <CartProvider>
       <Router>
         <Routes>
-        <Route path="/" element={<Menu />} />
+        <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/success" element={<Success />} />
-        <Route path="/cancel" element={<Cancel />} />
+        <Route path='/cancel' element={<Cancel />} />
         </Routes>
       </Router>
     </CartProvider>

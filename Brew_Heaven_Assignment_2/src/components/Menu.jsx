@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../api/productApi";
-import { useCart } from "../../store/CartContext";
+import { useCart } from "../store/CartContext";
 
 const Menu = () => {
   const { addToCart, removeFromCart, cartItems } = useCart(); // Access cart actions and items

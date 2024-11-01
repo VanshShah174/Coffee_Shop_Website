@@ -1,6 +1,6 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { useCart } from "../../store/CartContext";
+import { useCart } from "../store/CartContext";
 import { loadStripe } from "@stripe/stripe-js";
 
 // Initialize Stripe with your publishable key

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import { useCart } from "../../store/CartContext";
+import { useCart } from "../store/CartContext";
 // import shoppingCartIcon from "../img/shopping-cart.png"; // Adjust the path as needed
 
 
