@@ -5,13 +5,15 @@ import { CartProvider } from "../store/CartContext";
 
 
 import "./App.css";
+import Cart from "./components/Cart";
 
 function App() {
   return (
     <CartProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </CartProvider>
