@@ -1,9 +1,31 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import { useCart } from "../../store/CartContext";
+import { loadStripe } from "@stripe/stripe-js";
+
+// Initialize Stripe with your publishable key
+const stripePromise = loadStripe("STRIPE_PUBLISHABLE_KEY");
+// console.log(stripePromise);
 
 const Cart = () => {
   const { cartItems, total, addToCart, removeFromCart, deleteItem } = useCart();
+
+  const handleCheckout = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/stripe/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ cartItems }),
+      });
+
+      const { url } = await response.json();
+      window.location.href = url; // Redirect to Stripe Checkout
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#faf3e0] py-8">
@@ -13,7 +35,7 @@ const Cart = () => {
           <Link
             smooth
             to="/#menu"
-            className="text-white hover:underline text-lg font-semibold"
+            className="text-white hover:underline text-2xl font-semibold"
           >
             &larr; Back to Menu
           </Link>
@@ -21,10 +43,7 @@ const Cart = () => {
       </header>
 
       <main className="max-w-4xl mx-auto pt-24 px-4">
-        <section
-          id="cart"
-          className="bg-white rounded-lg shadow-lg p-6 mt-8"
-        >
+        <section id="cart" className="bg-white rounded-lg shadow-lg p-6 mt-8">
           {cartItems.length > 0 ? (
             <div id="cartItems" className="space-y-6">
               {cartItems.map((item) => (
@@ -77,7 +96,7 @@ const Cart = () => {
           )}
           
           <button
-            id="checkoutBtn"
+            onClick={handleCheckout}
             className="mt-6 w-full bg-[#d4a373] hover:bg-[#b68b57] text-white py-3 rounded-lg font-bold transition-colors text-lg shadow-md"
           >
             Proceed to Checkout
