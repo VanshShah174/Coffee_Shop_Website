@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { StripeModule } from './stripe/stripe.module';
 
 
 @Module({
@@ -18,7 +19,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         uri: configService.get<any>('MONGO_URI'), // Load MongoDB URI from .env
       }),
     }),
-    ProductsModule
+    ProductsModule,
+    StripeModule
   ],
   controllers: [AppController],
   providers: [AppService],
