@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../api/productApi";
+import { useCart } from "../../store/CartContext";
 
 const Menu = () => {
+  const { addToCart, removeFromCart, cartItems } = useCart(); // Access cart actions and items
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -30,6 +32,11 @@ const Menu = () => {
     }
   }, [selectedCategory, products]);
 
+  // Get quantity of the product in the cart
+  const getQuantity = (productId) => {
+    const item = cartItems.find((item) => item._id === productId);
+    return item ? item.quantity : 0;
+  };
 
   return (
     <section id="menu" className="max-w-screen-xl mx-auto py-16 px-4 text-center">
@@ -104,10 +111,14 @@ const Menu = () => {
             <div className="flex justify-center items-center mt-4 space-x-4">
               <button
                 onClick={() => removeFromCart(product._id)}
-                className="bg-red-500 text-white px-2 py-1 rounded"
+                disabled={getQuantity(product._id) === 0} // Disable when quantity is 0
+                className={`${
+                  getQuantity(product._id) === 0 ? "bg-gray-400" : "bg-red-500"
+                } text-white px-2 py-1 rounded transition-opacity duration-300 ease-in-out`}
               >
                 -
               </button>
+              <span className="text-lg">{getQuantity(product._id)}</span>
               <button
                 onClick={() => addToCart(product)}
                 className="bg-green-500 text-white px-2 py-1 rounded"
