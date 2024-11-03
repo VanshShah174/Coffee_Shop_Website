@@ -89,6 +89,7 @@ Frontend .env
 
 ```bash
 REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+```
 
 Backend .env
 
@@ -98,6 +99,7 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 DB_HOST=your_db_host
 DB_USER=your_db_user
 DB_PASS=your_db_password
+```
 
 Pages
 The app consists of the following main pages:
