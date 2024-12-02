@@ -1,0 +1,24 @@
+/* Import Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add your custom global styles below */
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #faf3e0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
