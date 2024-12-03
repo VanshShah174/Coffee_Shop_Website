@@ -1,0 +1,7 @@
+{
+  "name": "coffee-shop-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
