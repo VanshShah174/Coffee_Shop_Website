@@ -1,0 +1,29 @@
+.auth-card-container,
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.auth-card-container ion-card,
+.profile-card-container ion-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+ion-item {
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 10px 0;
+  display: block;
+}
+
+ion-button {
+  margin-top: 20px;
+}
