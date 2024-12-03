@@ -2,5 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/auth/login": "pages/auth/login.js",
+  "/cart": "pages/cart.js",
+  "/api/stripe/create-checkout-session": "pages/api/stripe/create-checkout-session.js",
+  "/cancel": "pages/cancel.js"
 }

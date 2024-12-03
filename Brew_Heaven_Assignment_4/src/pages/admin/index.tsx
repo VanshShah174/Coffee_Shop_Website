@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import { useAuth } from '../../context/AuthContext';
 import AdminPage from '../AdminPage';
 import { getProducts } from '../../api/adminApi';
+import React from 'react';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { req } = context;

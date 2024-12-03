@@ -14,7 +14,7 @@ const Gallery: React.FC = () => {
             src={CoffeeShopInterior} // Use the imported image
             alt="Coffee Shop Interior"
             layout="fill" // Ensures the image fills the container
-            objectFit="cover" // Makes the image cover the container
+            style={{ objectFit: 'cover' }}
             className="rounded-lg hover:scale-105 transition-transform"
           />
         </div>

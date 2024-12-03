@@ -1,3 +1,4 @@
+// src/stripe/stripe.service.ts
 import { Injectable } from '@nestjs/common';
 import Stripe from 'stripe';
 import { ConfigService } from '@nestjs/config';
@@ -15,7 +16,7 @@ export class StripeService {
   async createCheckoutSession(cartItems) {
     const lineItems = cartItems.map((item) => ({
       price_data: {
-        currency: 'cad',
+        currency: 'usd',
         product_data: {
           name: item.name,
         },
@@ -28,8 +29,8 @@ export class StripeService {
       payment_method_types: ['card'],
       mode: 'payment',
       line_items: lineItems,
-      success_url: this.configService.get('success_url'),
-      cancel_url: this.configService.get('cancel_url'),
+      success_url: `${this.configService.get('BASE_URL')}/`,
+      cancel_url: `${this.configService.get('BASE_URL')}/cancel`,
     });
 
     return session;
