@@ -1,4 +1,3 @@
-
 # Brew Heaven ☕️
 Welcome to **Brew Heaven** – a delightful coffee-themed web application designed to bring the best of coffee experiences to your screen. This project combines a robust frontend with a scalable backend, delivering a smooth and secure user experience for coffee enthusiasts.
 
@@ -25,7 +24,7 @@ Welcome to **Brew Heaven** – a delightful coffee-themed web application design
 - **Vite**: Fast development environment.
 - **Redux**: State management.
 - **Tailwind CSS**: Styling framework.
-- **Axios**: API request handling.
+- **Fetch**: API request handling.
 - **React Router DOM**: Navigation and routing.
 - **Next.js**: Server-side rendering and static site generation.
 - **Stripe Integration**: Secure payment processing.
@@ -59,7 +58,6 @@ Welcome to **Brew Heaven** – a delightful coffee-themed web application design
 ## Frontend Dependencies
 
 - \`@stripe/stripe-js\`: Stripe API integration.
-- \`axios\`: API request handling.
 - \`react\`, \`react-dom\`: Core React libraries.
 - \`react-router-dom\`, \`react-scroll\`: Navigation and scrolling.
 - \`redux\`, \`react-redux\`: State management.
@@ -181,4 +179,3 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 ---
 
 Enjoy your journey with **Brew Heaven**! ☕
-EOF
