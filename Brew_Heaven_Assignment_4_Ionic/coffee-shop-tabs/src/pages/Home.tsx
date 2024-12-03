@@ -16,7 +16,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Coffee Bliss</IonTitle>
+          <IonTitle>Brew Heaven</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           }}
         >
           <div className="hero-overlay">
-            <h1 className="hero-title">Welcome to Coffee Bliss</h1>
+            <h1 className="hero-title">Welcome to Brew Heaven</h1>
             <p className="hero-subtitle">Sip the joy, savor the flavor.</p>
             <IonButton fill="outline" className="hero-button" href="/menu">
               Explore Our Menu
