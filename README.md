@@ -220,15 +220,6 @@ DB_PASS=your_db_password
 
 ---
 
-## **Future Enhancements**  
-
-1. **OAuth2 Integration**: Add Google and Facebook login options.  
-2. **Product Filters and Sorting**: Allow users to filter and sort menu items.  
-3. **Order History**: Display previous orders on the Profile page.  
-4. **Multi-Factor Authentication**: Enhance user security.  
-
----
-
 ## **License**  
 This project is licensed under the [MIT License](LICENSE).  
 
